@@ -1,3 +1,5 @@
+import { Component } from "./Component";
+
 /**
  *  Pseudo Template: View
  *  React Native: View
@@ -5,7 +7,7 @@
  * 
  */
 
-export interface View{
+export interface View extends Component {
     
     children: Array<any>,
     margin:number,
