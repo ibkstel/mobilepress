@@ -1,25 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import AndroidDevice from './components/AndroidDevice';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fluid style={{paddingTop: '3%'}}>
+      <Row>
+        <Col md="9">
+          <AndroidDevice containerStyle={{display: 'flex', justifyContent: 'center'}}></AndroidDevice>
+        </Col>
+        <Col md="3">
+          <ListGroup>
+            <ListGroup.Item>Button</ListGroup.Item>
+            <ListGroup.Item>Text</ListGroup.Item>
+          </ListGroup>
+        </Col>
+      </Row>
+    
+    </Container>
   );
 }
 
